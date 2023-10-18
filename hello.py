@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from function import valid_login
+from pprint import pprint
 
 app = Flask(__name__)
 
@@ -16,6 +17,7 @@ def register():
 
 @app.post('/inscription')
 def inscription():
+    pprint(request.form)
     return "test"
 
 
